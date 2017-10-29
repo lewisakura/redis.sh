@@ -5,7 +5,8 @@ A small bash script to assist in the operation of a Redis server. It also preven
 I would recommend you compile this script using [SHC](https://github.com/neurobin/shc) and drop it into `/usr/bin`. You can drop the script in there under /usr/bin/redis, but the help menu will have the prefix set to `/usr/bin/redis` for some reason. When compiled, it displays `redis` as intended. This is done by the automated installation script, however you can install it manually by cloning the repository, compiling redis.sh and copying it to `/usr/bin`.
 
 If you want a visual guide on how to manually install redis.sh, then view this [asciicast](https://asciinema.org/a/144754).
-If you want a visual guide on how to automatically install redis.sh, then view this [asciicast]().
+
+If you want a visual guide on how to automatically install redis.sh, then view this [asciicast](https://asciinema.org/a/144757).
 
 TL;DR Download the script, compile the script using [SHC](https://github.com/neurobin/shc) and drop it in `/usr/bin` as `redis` and you should be good to go.
 
