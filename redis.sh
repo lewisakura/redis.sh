@@ -11,7 +11,7 @@ ERROR="\033[0;31m"
 # End Colours
 
 redis_help() {
-        echo -e "\033[0;1;34mRedis Server Tool${RESET}"
+        echo -e "\033[0;1;34mRedis.sh${RESET}"
         echo -e "${PREFIX} ${HELP_CMD}start${RESET}    ${HELP_CMD_DESCRIPTION}Starts the Redis instance"
         echo -e "${PREFIX} ${HELP_CMD}stop${RESET}     ${HELP_CMD_DESCRIPTION}Stops the Redis instance"
         echo -e "${PREFIX} ${HELP_CMD}restart${RESET}  ${HELP_CMD_DESCRIPTION}Restarts the Redis instance"
@@ -54,6 +54,7 @@ else
                 stop    ) redis_stop
                           ;;
                 restart ) redis_stop
+                          sleep 1
                           redis_start
                           ;;
                 status  ) if redis_status; then
