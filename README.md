@@ -34,6 +34,8 @@ To use redis.sh, simply run the `redis` command or `redis help`. Each command sh
 
 `redis status` will tell you if the server is running.
 
+`redis config` will open up the default Redis config (/etc/redis/redis.conf) using your set editor or `vim`.
+
 `redis help` will give you the help message.
 
 If you want a visual guide on how to use redis.sh, then view this [asciicast](https://asciinema.org/a/144755).
