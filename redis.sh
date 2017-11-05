@@ -12,11 +12,12 @@ ERROR="\033[0;31m"
 
 redis_help() {
         echo -e "\033[0;1;34mRedis.sh${RESET}"
-        echo -e "${PREFIX} ${HELP_CMD}start${RESET}    ${HELP_CMD_DESCRIPTION}Starts the Redis instance"
-        echo -e "${PREFIX} ${HELP_CMD}stop${RESET}     ${HELP_CMD_DESCRIPTION}Stops the Redis instance"
-        echo -e "${PREFIX} ${HELP_CMD}restart${RESET}  ${HELP_CMD_DESCRIPTION}Restarts the Redis instance"
+        echo -e "${PREFIX} ${HELP_CMD}start${RESET}    ${HELP_CMD_DESCRIPTION}Starts the Redis instance."
+        echo -e "${PREFIX} ${HELP_CMD}stop${RESET}     ${HELP_CMD_DESCRIPTION}Stops the Redis instance."
+        echo -e "${PREFIX} ${HELP_CMD}restart${RESET}  ${HELP_CMD_DESCRIPTION}Restarts the Redis instance."
         echo -e "${PREFIX} ${HELP_CMD}status${RESET}   ${HELP_CMD_DESCRIPTION}Check if Redis is running."
-        echo -e "${PREFIX} ${HELP_CMD}help${RESET}     ${HELP_CMD_DESCRIPTION}See this help message"
+        echo -e "${PREFIX} ${HELP_CMD}config${RESET}   ${HELP_CMD_DESCRIPTION}Edit the Redis configuration."
+        echo -e "${PREFIX} ${HELP_CMD}help${RESET}     ${HELP_CMD_DESCRIPTION}See this help message."
 }
 
 redis_status() {
@@ -45,6 +46,10 @@ redis_stop() {
         fi
 }
 
+redis_config() {
+        sudo ${VISUAL:-${EDITOR:-vi}} /etc/redis/redis.conf
+}
+
 if [ "$1" == "" ]; then
         redis_help
 else
@@ -63,7 +68,9 @@ else
                                 echo -e "${STOP}Redis is NOT running.${RESET}"
                           fi
                           ;;
-                help | *  ) redis_help
+                config  ) redis_config
+                          ;;
+                help | *) redis_help
                           ;;
         esac
 fi
