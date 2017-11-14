@@ -17,9 +17,13 @@ If you want to install manually for some reason, do the following:
 
 The steps above are the exact steps of the automatic installation.
 
-If you want a visual guide on how to manually install redis.sh, then view this [asciicast](https://asciinema.org/a/144754).
+If you want a visual guide on how to manually install redis.sh, then view this asciicast:
 
-If you want a visual guide on how to automatically install redis.sh, then view this [asciicast](https://asciinema.org/a/144757).
+[![Manual Installation Guide](https://asciinema.org/a/144754.png)](https://asciinema.org/a/144754)
+
+If you want a visual guide on how to automatically install redis.sh, then view this asciicast:
+
+[![Automatic Installation Guide](https://asciinema.org/a/144757.png)](https://asciinema.org/a/144757)
 
 TL;DR Download the script, compile the script using [SHC](https://github.com/neurobin/shc) and drop it in `/usr/bin` as `redis` and you should be good to go.
 
@@ -38,4 +42,6 @@ To use redis.sh, simply run the `redis` command or `redis help`. Each command sh
 
 `redis help` will give you the help message.
 
-If you want a visual guide on how to use redis.sh, then view this [asciicast](https://asciinema.org/a/144755).
+If you want a visual guide on how to use redis.sh, then view this asciicast:
+
+[![redis.sh Usage](https://asciinema.org/a/144755.png)](https://asciinema.org/a/144755)
