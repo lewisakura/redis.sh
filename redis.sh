@@ -31,7 +31,7 @@ redis_status() {
 redis_start() {
         if ! redis_status; then
                 echo -e "${START}Starting Redis...${RESET}"
-                redis-server /etc/redis/redis.conf > /dev/null
+                service redis start
         else
                 echo -e "${ERROR}Cannot start Redis: It is already running.${RESET}"
         fi
@@ -40,7 +40,7 @@ redis_start() {
 redis_stop() {
         if redis_status; then
                 echo -e "${STOP}Stopping Redis...${RESET}"
-                pkill redis-server > /dev/null
+                service redis stop
         else
                 echo -e "${ERROR}Cannot stop Redis: It is not running.${RESET}"
         fi
